@@ -1,25 +1,28 @@
-# days\_sub
+# days_sub
 
 ## 功能
 
-从给定date或者datetime中减去指定的天数，获得新的datetime结果。
+从给定日期或者日期时间中减去指定的天数，获得新的 DATETIME 结果。
 
 ## 语法
 
 ```Haskell
-DATETIME days_sub(DATETIME|DATE d, INT n);
+DATETIME days_sub(DATETIME|DATE date, INT n);
 ```
 
 ## 参数说明
-`d`: DATE或者DATETIME类型的表达式；
 
-`n`: 从`d`中要减去的指定天数。
+`date`: DATE 或者 DATETIME 类型的表达式。
+
+`n`: 要减去的指定天数。
 
 ## 返回值说明
 
-返回一个DATETIME类型的结果，
-当有参数为NULL或者不合法，则返回NULL，
-当计算结果超出[0000-01-01 00:00:00, 9999-12-31 00:00:00]的范围，则返回NULL。
+返回一个DATETIME类型的结果。
+
+如果任一参数为 NULL 或者不合法，则返回 NULL。
+
+当计算结果超出 [0000-01-01 00:00:00, 9999-12-31 00:00:00]的范围，则返回 NULL。
 
 ## 示例
 
